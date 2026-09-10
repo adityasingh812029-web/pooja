@@ -1,0 +1,754 @@
+.page {
+  padding: var(--space-2xl) 0 var(--space-4xl);
+  min-height: 60vh;
+}
+
+.pageInner {
+  max-width: var(--container-xl);
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .pageInner {
+    padding-inline: var(--space-xl);
+  }
+}
+
+.pageHeader {
+  margin-bottom: var(--space-2xl);
+}
+
+.pageTitle {
+  font-size: var(--fs-3xl);
+  margin-bottom: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .pageTitle {
+    font-size: var(--fs-4xl);
+  }
+}
+
+.pageSubtext {
+  font-size: var(--fs-md);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+}
+
+/* Shared grid */
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+@media (min-width: 640px) { .grid2 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .grid2 { grid-template-columns: repeat(3, 1fr); } }
+
+.grid4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+@media (min-width: 640px) { .grid4 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .grid4 { grid-template-columns: repeat(4, 1fr); } }
+
+/* Filter */
+.filterRow {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.filterPill {
+  padding: 8px 16px;
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-height: 36px;
+}
+
+.filterPill:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.filterPillActive {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+/* Detail page */
+.detailHero {
+  background: var(--color-bg-warm);
+  padding: var(--space-2xl) 0 var(--space-3xl);
+}
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+}
+
+@media (min-width: 768px) {
+  .detailGrid {
+    grid-template-columns: 1.4fr 1fr;
+  }
+}
+
+.detailImage {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: linear-gradient(135deg, var(--color-bg-cream), var(--color-gold-subtle));
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  opacity: 0.25;
+}
+
+.detailSidebar {
+  background: var(--color-bg-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border-light);
+  height: fit-content;
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-lg));
+}
+
+.detailPrice {
+  font-family: var(--font-heading);
+  font-size: var(--fs-3xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.detailPriceUnit {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+.detailMeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-lg) 0;
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+  margin: var(--space-lg) 0;
+}
+
+.detailMetaRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+}
+
+.detailContent {
+  padding: var(--space-2xl) 0;
+}
+
+.detailContentInner {
+  max-width: var(--container-xl);
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .detailContentInner {
+    padding-inline: var(--space-xl);
+  }
+}
+
+.detailSection {
+  margin-bottom: var(--space-2xl);
+}
+
+.detailSectionTitle {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space-md);
+  color: var(--color-text-primary);
+}
+
+.detailText {
+  font-size: var(--fs-base);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+/* Booking form / Stepper */
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-2xl);
+  overflow-x: auto;
+  padding-bottom: var(--space-sm);
+}
+
+.stepperItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  white-space: nowrap;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+.stepperItemActive {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.stepperItemDone {
+  color: var(--color-success);
+}
+
+.stepperDot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.stepperDotActive {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.stepperDotDone {
+  border-color: var(--color-success);
+  background: var(--color-success);
+  color: #fff;
+}
+
+.stepperLine {
+  width: 40px;
+  height: 2px;
+  background: var(--color-border);
+  flex-shrink: 0;
+}
+
+.stepperLineActive {
+  background: var(--color-primary);
+}
+
+/* Form */
+.formCard {
+  background: var(--color-bg-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+}
+
+.formGroup {
+  margin-bottom: var(--space-lg);
+}
+
+.formLabel {
+  display: block;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-base);
+  background: var(--color-bg-ivory);
+  transition: border-color var(--transition-fast);
+  min-height: 44px;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-subtle);
+}
+
+.formTextarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .formRow {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Price Summary */
+.priceSummary {
+  background: var(--color-bg-warm);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-sm) 0;
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+}
+
+.priceTotal {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--space-md);
+  margin-top: var(--space-sm);
+  border-top: 2px solid var(--color-border-gold);
+  font-weight: 700;
+  font-size: var(--fs-lg);
+  color: var(--color-text-primary);
+}
+
+/* Confirmation */
+.confirmBox {
+  text-align: center;
+  padding: var(--space-3xl) var(--space-xl);
+}
+
+.confirmIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(46, 125, 50, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-lg);
+  color: var(--color-success);
+}
+
+.confirmTitle {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-sm);
+}
+
+.confirmText {
+  font-size: var(--fs-md);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xl);
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.confirmId {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--color-bg-cream);
+  border-radius: var(--radius-md);
+  font-family: monospace;
+  font-size: var(--fs-sm);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-xl);
+}
+
+/* Mobile bottom CTA */
+.mobileBottomCta {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-md);
+  background: var(--color-bg-white);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+  z-index: var(--z-sticky);
+}
+
+@media (min-width: 768px) {
+  .mobileBottomCta {
+    display: none;
+  }
+}
+
+.mobileCtaInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+/* My Bookings */
+.bookingCard {
+  background: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-xs);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  transition: box-shadow var(--transition-fast);
+}
+
+.bookingCard:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.bookingHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.bookingStatus {
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+}
+
+.statusCompleted {
+  background: rgba(46, 125, 50, 0.1);
+  color: var(--color-success);
+}
+
+.statusUpcoming {
+  background: var(--color-saffron-subtle);
+  color: var(--color-saffron-dark);
+}
+
+.statusProcessing {
+  background: rgba(21, 101, 192, 0.1);
+  color: var(--color-info);
+}
+
+/* Legal pages */
+.legalContent {
+  max-width: var(--container-md);
+  margin-inline: auto;
+}
+
+.legalContent h2 {
+  font-size: var(--fs-xl);
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-md);
+}
+
+.legalContent p {
+  font-size: var(--fs-base);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-md);
+}
+
+.legalContent ul {
+  padding-left: var(--space-xl);
+  margin-bottom: var(--space-md);
+}
+
+.legalContent li {
+  font-size: var(--fs-base);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-sm);
+  list-style: disc;
+}
+
+/* 404 */
+.notFound {
+  text-align: center;
+  padding: var(--space-5xl) var(--space-xl);
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.notFoundCode {
+  font-family: var(--font-heading);
+  font-size: 8rem;
+  color: var(--color-primary);
+  opacity: 0.15;
+  line-height: 1;
+}
+
+.notFoundTitle {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-md);
+}
+
+.notFoundText {
+  font-size: var(--fs-md);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xl);
+  max-width: 400px;
+}
+
+/* Temple card */
+.templeCard {
+  background: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.templeCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.templeCardImage {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, var(--color-bg-cream), var(--color-gold-subtle));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  opacity: 0.25;
+}
+
+.templeCardBody {
+  padding: var(--space-lg);
+}
+
+.templeCardName {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.templeCardLocation {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: var(--space-sm);
+}
+
+.templeCardDeity {
+  font-size: var(--fs-sm);
+  color: var(--color-saffron-dark);
+  font-weight: 500;
+  margin-bottom: var(--space-sm);
+}
+
+.templeCardDesc {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-md);
+}
+
+.templeCardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border-light);
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+/* Contact form */
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+}
+
+@media (min-width: 768px) {
+  .contactGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.contactItem {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+.contactItemIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.contactItemTitle {
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  margin-bottom: 2px;
+}
+
+.contactItemText {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Daan card */
+.daanCard {
+  background: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.daanCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.daanIcon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.daanTitle {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.daanDesc {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-lg);
+}
+
+/* Info grid for panchang/rashifal */
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .infoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.infoCard {
+  background: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-xs);
+}
+
+.infoCardLabel {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-xs);
+}
+
+.infoCardValue {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  color: var(--color-primary);
+}
+
+/* Rashifal */
+.rashiGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .rashiGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .rashiGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.rashiCard {
+  background: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-align: center;
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-xs);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.rashiCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+}
+
+.rashiIcon {
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
+}
+
+.rashiName {
+  font-family: var(--font-heading);
+  font-size: var(--fs-base);
+  margin-bottom: 2px;
+}
+
+.rashiNameHi {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}

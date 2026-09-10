@@ -1,0 +1,214 @@
+.footer {
+  background: var(--color-text-primary);
+  color: rgba(255, 255, 255, 0.8);
+  padding-top: var(--space-4xl);
+  padding-bottom: 0;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  max-width: var(--container-xl);
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .footerGrid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding-inline: var(--space-xl);
+  }
+}
+
+.brandSection {}
+
+.brandLogo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.brandIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-saffron));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--font-heading);
+  font-size: var(--fs-base);
+}
+
+.brandName {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  color: #fff;
+}
+
+.brandDesc {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-lg);
+  max-width: 320px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-sm);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Link Columns */
+.linkColumn {}
+
+.linkHeading {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-lg);
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.footerLink {
+  font-size: var(--fs-sm);
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transition-fast);
+  display: inline-block;
+}
+
+.footerLink:hover {
+  color: var(--color-saffron);
+}
+
+/* Newsletter */
+.newsletter {
+  margin-top: var(--space-lg);
+}
+
+.newsletterForm {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.newsletterInput {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: var(--fs-sm);
+  min-height: 44px;
+}
+
+.newsletterInput::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.newsletterInput:focus {
+  outline: 2px solid var(--color-saffron);
+  outline-offset: 1px;
+  border-color: transparent;
+}
+
+.newsletterBtn {
+  padding: 0.6rem 1.2rem;
+  background: var(--color-saffron);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  min-height: 44px;
+  white-space: nowrap;
+}
+
+.newsletterBtn:hover {
+  background: var(--color-saffron-dark);
+}
+
+/* Social */
+.socialLinks {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.socialLink {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all var(--transition-fast);
+}
+
+.socialLink:hover {
+  background: var(--color-saffron);
+  color: #fff;
+}
+
+/* Bottom Bar */
+.bottomBar {
+  margin-top: var(--space-3xl);
+  padding: var(--space-lg) var(--space-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  max-width: var(--container-xl);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .bottomBar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: var(--space-xl);
+  }
+}
+
+.copyright {
+  font-size: var(--fs-xs);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.legalLinks {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.legalLink {
+  font-size: var(--fs-xs);
+  color: rgba(255, 255, 255, 0.4);
+  transition: color var(--transition-fast);
+}
+
+.legalLink:hover {
+  color: var(--color-saffron);
+}
