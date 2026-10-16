@@ -73,7 +73,10 @@ export default function CampaignCarousel() {
                   style={{ background: campaign.color }}
                 >
                   <div className={styles.bannerBg} aria-hidden="true">
-                    <div className={styles.bannerPattern} />
+                    {campaign.image && (
+                      <img src={campaign.image} alt="" className={styles.bannerImageBg} />
+                    )}
+                    <div className={styles.bannerOverlay} />
                   </div>
                   <div className={styles.bannerContent}>
                     <h3 className={styles.bannerTitle}>{campaign.title}</h3>

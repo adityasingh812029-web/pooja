@@ -29,7 +29,9 @@ export default async function TempleDetailPage({ params }) {
 
         <div className={styles.detailGrid}>
           <div>
-            <div className={styles.detailImage} aria-label={`${temple.name} illustration`}>🛕</div>
+            <div className={styles.detailImage}>
+              <img src={temple.image} alt={temple.name} />
+            </div>
           </div>
           <div>
             <h1 className={styles.pageTitle}>{temple.name}</h1>

@@ -21,7 +21,9 @@ export default function TemplesPage() {
           {temples.map((temple) => (
             <Link key={temple.id} href={`/temples/${temple.id}`} style={{ textDecoration: "none" }}>
               <div className={styles.templeCard}>
-                <div className={styles.templeCardImage}>🛕</div>
+                <div className={styles.templeCardImage}>
+                  <img src={temple.image} alt={temple.name} />
+                </div>
                 <div className={styles.templeCardBody}>
                   <h3 className={styles.templeCardName}>{temple.name}</h3>
                   <div className={styles.templeCardLocation}><MapPin size={14} /> {temple.location}</div>
